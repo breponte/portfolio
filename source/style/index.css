@@ -1,0 +1,10 @@
+body {
+    background-color:antiquewhite;
+}
+
+.project  {
+    display: inline-flex;
+    background-color:burlywood;
+    margin-bottom: 10pt;
+    text-align: center;
+}
