@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style/index.css" rel="stylesheet">
+    <script defer src="./scripts/index.js"></script>
     <title>Brandon's Portfolio</title>
 </head>
 
@@ -12,68 +13,79 @@
 <body>
 
     <header>
-
-        <h1>Welcome to My Portfolio!</h1>
-        <nav>
-            <ol>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#projects-in-development">Projects in Development</a></li>
-                <li><a href="#past-projects">Past Projects</a></li>
-                <li><a href="#project-ideas">Project Ideas</a></li>
-            </ol>
-        </nav>
-
+        <section class="hidden">
+            <h1>Welcome to My Portfolio!</h1>
+            <nav>
+                <ol>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects-in-development">Projects in Development</a></li>
+                    <li><a href="#past-projects">Past Projects</a></li>
+                    <li><a href="#project-ideas">Project Ideas</a></li>
+                </ol>
+            </nav>
+        </section>
     </header>
-
-    <hr>
+    
 
     <main>
+            <section>
+                <h2 class="hidden" id="about-me">About Me</h2>
+                <div class="hidden">
+                    <p>Currently in development...</p>
+                </div>
+            </section>
 
-        <h2 id="about-me">About Me</h2>
+            <!--<h3><a href=""></a></h3>-->
+            <section>
+                <h2 class="hidden" id="projects-in-development">Projects in Development</h2>
 
-        <!--<h3><a href=""></a></h3>-->
-        <h2 id="projects-in-development">Projects in Development</h2>
+                <div class="project hidden">
+                    <h3><a href="https://github.com/breponte/hour-a-day"></a>Hour a Day (tentative title)</h3>
 
-        <div class="project">
-            <h3><a href="https://github.com/breponte/hour-a-day"></a>Hour a Day (tentative title)</h3>
-
-            <body>
-                I had been thinking about this idea while in my Essentials of Entrepreneurship class and developed the idea
-                a little more in my Entrepreneurship seminar. The idea is a hybrid of Apple's Screen Time and OneSec which
-                both aim to increase resistance to addictive phone applications. Their solutions alone were not good enough
-                in my opinion, but a merging of their solutions in addition to my own flavor would tremendously increase the
-                resistance and successfully aid in combatting addiction.
-            </body>
-        </div>
+                    <p>
+                        I had been thinking about this idea while in my Essentials of Entrepreneurship class and developed the idea
+                        a little more in my Entrepreneurship seminar. The idea is a hybrid of Apple's Screen Time and OneSec which
+                        both aim to increase resistance to addictive phone applications. Their solutions alone were not good enough
+                        in my opinion, but a merging of their solutions in addition to my own flavor would tremendously increase the
+                        resistance and successfully aid in combatting addiction.
+                    </p>
+                </div>
+            </section>
 
 
-        <h2 id="past-projects">Past Projects</h2>
+            <section>
+            <h2 class="hidden" id="past-projects">Past Projects</h2>
 
-        <div class="project">
-            <h3><a href="https://github.com/breponte/mothers-day-site">Mother's Day Card 2023</a></h3>
+            <div class="project hidden">
+                <h3><a href="https://github.com/breponte/mothers-day-site">Mother's Day Card 2023</a></h3>
 
-            <p>
-                I made this as a project for my mom. I had just recently learned JavaScript, HTML, and CSS in my Spring CSE
-                110 Software Enginnering class so I thought I could showcase my family the skills I had been learning while
-                also experimenting with the tools I just learned.
-            </p>
-        </div>
+                <p>
+                    I made this as a project for my mom. I had just recently learned JavaScript, HTML, and CSS in my Spring CSE
+                    110 Software Enginnering class so I thought I could showcase my family the skills I had been learning while
+                    also experimenting with the tools I just learned.
+                </p>
+            </div>
 
-        <div class="project">
-            <h3><a href="https://github.com/breponte/keylogger">Windows Keylogger</a></h3>
 
-            <p>
-                I wanted to explore in several fields in Computer Science, and Cybersecurity was one of them. I decided to
-                make a keylogger as it would be a relatively simple project. This would also be the first time I motivated
-                myself to make a project solely on my internal motivation. I followed a tutorial, but attempted to create it
-                beforehand using only the Win32 API.
-            </p>
-        </div>
+            <div class="project hidden">
+                <h3><a href="https://github.com/breponte/keylogger">Windows Keylogger</a></h3>
 
-        <h2 id="project-ideas">Project Ideas</h2>
+                <p>
+                    I wanted to explore in several fields in Computer Science, and Cybersecurity was one of them. I decided to
+                    make a keylogger as it would be a relatively simple project. This would also be the first time I motivated
+                    myself to make a project solely on my internal motivation. I followed a tutorial, but attempted to create it
+                    beforehand using only the Win32 API.
+                </p>
+            </div>
+            </section>
 
-        <p>All my ideas are on my phone as of now</p>
 
+            <section>
+                <h2 class="hidden" id="project-ideas">Project Ideas</h2>
+                <div class="hidden">
+                    <p>All my ideas are on my phone as of now</p>
+                </div>
+            </section>
     </main>
 
 
