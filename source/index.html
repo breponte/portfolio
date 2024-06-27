@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,104 +7,68 @@
     <script defer src="./scripts/index.js"></script>
     <title>Brandon's Portfolio</title>
 </head>
-
-
 <body>
-
     <header>
-        <section class="hidden">
-            <h1>Welcome to My Portfolio!</h1>
-            <nav>
-                <ol>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#projects-in-development">Projects in Development</a></li>
-                    <li><a href="#past-projects">Past Projects</a></li>
-                    <li><a href="#project-ideas">Project Ideas</a></li>
-                </ol>
-            </nav>
-        </section>
+        <nav>
+            <a id="about-me-nav" href="#about-me">About Me</a>
+            <a id="experience-nav" href="#experience">Experience</a>
+            <a id="education-nav" href="#education">Education</a>
+            <a id="projects-nav" href="#projects">Projects</a>
+        </nav>
     </header>
-    
 
     <main>
-            <section>
-                <h2 class="hidden" id="about-me">About Me</h2>
-                <div class="hidden">
-                    <p>Currently in development...</p>
-                </div>
-            </section>
-
-            <!--<h3><a href=""></a></h3>-->
-            <section>
-                <h2 class="hidden" id="projects-in-development">Projects in Development</h2>
-
-                <div class="project hidden">
-                    <h3><a href="https://github.com/breponte/hour-a-day"></a>Hour a Day (tentative title)</h3>
-
-                    <p>
-                        I had been thinking about this idea while in my Essentials of Entrepreneurship class and developed the idea
-                        a little more in my Entrepreneurship seminar. The idea is a hybrid of Apple's Screen Time and OneSec which
-                        both aim to increase resistance to addictive phone applications. Their solutions alone were not good enough
-                        in my opinion, but a merging of their solutions in addition to my own flavor would tremendously increase the
-                        resistance and successfully aid in combatting addiction.
-                    </p>
-                </div>
-            </section>
-
-
-            <section>
-            <h2 class="hidden" id="past-projects">Past Projects</h2>
-
-            <div class="project hidden">
-                <h3><a href="https://github.com/breponte/mothers-day-site">Mother's Day Card 2023</a></h3>
-
-                <p>
-                    I made this as a project for my mom. I had just recently learned JavaScript, HTML, and CSS in my Spring CSE
-                    110 Software Enginnering class so I thought I could showcase my family the skills I had been learning while
-                    also experimenting with the tools I just learned. Please do not use or redistribute this code, it is for
-                    personal use only.
-                </p>
+        <section id="about-me">
+            <h2>My name is</h2>
+            <h1>Brandon Reponte</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur 
+                tincidunt magna in mollis interdum. Sed non tempus sem. Vestibulum 
+                eu leo sed arcu rhoncus porttitor. Sed risus ex, lobortis eu ultrices 
+                accumsan, efficitur eget felis. Quisque neque ex, maximus ac ultricies 
+                tincidunt, porttitor sit amet nisl. Sed facilisis non sem in mattis. 
+                Donec quis risus fermentum, suscipit risus at, posuere lectus.
+            </p>
+            <h2>Contact Me:</h2>
+            <div id="about-me-contact" class="blue card">
+                <p>Number: ###-###-####</p>
+                <p>Email: dummyemail@gmail.com</p>
             </div>
-
-
-            <div class="project hidden">
-                <h3><a href="https://github.com/breponte/keylogger">Windows Keylogger</a></h3>
-
-                <p>
-                    I wanted to explore in several fields in Computer Science, and Cybersecurity was one of them. I decided to
-                    make a keylogger as it would be a relatively simple project. This would also be the first time I motivated
-                    myself to make a project solely on my internal motivation. I followed a tutorial, but attempted to create it
-                    beforehand using only the Win32 API.
-                </p>
+            <div id="about-me-linkedin" class="light-purple flip card">
+                <!-- TODO: card flip interactable -->
             </div>
-
-            
-            <div class="project hidden">
-                <h3><a href="https://github.com/breponte/pomodoro-timer">Pomodoro Timer</a></h3>
-
-                <p>
-                    I wanted to program something in C++, my programming language of choice. All my experience in programming was
-                    limited to exercises and small programming assignments in my classes, so I wanted to make an actual project.
-                    I like to use Pomodoro timers when I study, so I thought it was a great opportunity to make something that I
-                    will use. Here is my C++ widget that I made using Qt framework and editor.
-                </p>
+            <div id="about-me-github" class="light-purple flip card">
+                <!-- TODO: card flip interactable -->
             </div>
-            </section>
-
-
-            <section>
-                <h2 class="hidden" id="project-ideas">Project Ideas</h2>
-                <div class="hidden">
-                    <p>All my ideas are on my phone as of now</p>
-                </div>
-            </section>
+        </section>
+        <section id="experience">
+            <h1>My Experience</h1>
+            <div id="experience-gallery">
+                <!-- TODO: custom web component -->
+            </div>
+        </section>
+        <section id="education">
+            <h2>I attended</h2>
+            <img src="./assets/images/ucsd-logo.webp" alt="UC San Diego">
+            <img src="./assets/images/ucsd-seal.webp" alt="UC San Diego Logo">
+            <h2>under the</h2>
+            <img src="./assets/images/ucsd-cse-logo.webp" alt="Computer Science and Engineering Department">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur 
+                tincidunt magna in mollis interdum. Sed non tempus sem. Vestibulum 
+                eu leo sed arcu rhoncus porttitor. Sed risus ex, lobortis eu ultrices 
+                accumsan, efficitur eget felis. Quisque neque ex, maximus ac ultricies 
+                tincidunt, porttitor sit amet nisl. Sed facilisis non sem in mattis. 
+                Donec quis risus fermentum, suscipit risus at, posuere lectus.
+            </p>
+        </section>
+        <section id="projects">
+            <h1>My Projects</h1>
+            <div id="projects-gallery">
+                <!-- TODO: custom web component -->
+            </div>
+        </section>
     </main>
 
-
-    <footer>
-
-    </footer>
-
 </body>
-
 </html>
