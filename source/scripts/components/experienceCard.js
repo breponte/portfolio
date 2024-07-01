@@ -7,19 +7,40 @@ const experienceTemplate = document.createElement("template");
 experienceTemplate.innerHTML = `
     <style>
         div {
-            border: 2px solid black;
+            background-color: var(--blue);
+            border-radius: 1.5rem;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: 2.5rem 2.5rem 20rem;
+            padding: 1rem;
         }
 
         h3 {
-            color: red;
+            font-family: IBMPlexMono;
+            color: var(--white);
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        
+        /* TODO: Broken, using outside styling and not encapsulating */
+        p {
+            font-family: Roboto:
+            color: var(--white);
+            margin: 0;
+            font-size: 5rem;
         }
 
-        #company {
-            color: blue;
-        }
-
-        #date {
-            color: green;
+        div > div {
+            width: 100%;
+            height: 100%;
+            grid-row-start: 3;
+            grid-column: span 2;
+            border-radius: 0rem 0rem 1.5rem 1.5rem;
+            display: flex;
+            justify-self: center;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--purple);
         }
 
         div > div:not(.active) {
@@ -31,11 +52,11 @@ experienceTemplate.innerHTML = `
         <h3>
             <slot></slot>
         </h3>
-        <p id="company">
-            <slot name="company"></slot>
-        </p>
         <p id="date">
             <slot name="date"></slot>
+        </p>
+        <p id="company">
+            <slot name="company"></slot>
         </p>
         <div id="image" class="active">
             <slot name="image"></slot>
