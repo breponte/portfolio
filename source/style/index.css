@@ -3,10 +3,85 @@
     --blue: #150050;
     --purple: #3F0071;
     --light-purple: #610094;
+    --white: #FFF;
+}
+
+@font-face {
+    font-family: JuliusSansOne;
+    src: url(../assets/fonts/JuliusSansOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: IBMPlexSans;
+    src: url(../assets/fonts/IBMPlexSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: IBMPlexMono;
+    src: url(../assets/fonts/IBMPlexMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto-Regular.ttf);
 }
 
 body {
     background-color: var(--background-color);
+    overflow: hidden;
+}
+
+h1 {
+    font-family: JuliusSansOne;
+    font-size: 2.5rem;
+    color: var(--white);
+    margin: 0;
+}
+
+h2 {
+    font-family: IBMPlexSans;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 0;
+}
+
+h3 {
+    font-family: IBMPlexMono;
+    font-size: 1.25rem;
+    color: var(--white);
+    margin: 0;
+}
+
+p, a {
+    font-family: Roboto;
+    font-size: 1.25rem;
+    color: var(--white);
+    margin: 0;
+}
+
+.blue-card {
+    background-color: var(--blue);
+    border-radius: 1.5rem;
+}
+
+.light-purple-card {
+    background-color: var(--light-purple);
+    border-radius: 1.5rem;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    gap: 3rem;
 }
 
 section:not(.active) {

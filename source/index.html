@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style/index.css" rel="stylesheet">
+    <link href="./style/aboutme.css" rel="stylesheet">
     <script defer src="./scripts/index.js"></script>
     <script defer src="./scripts/components/experienceCard.js"></script>
     <script defer src="./scripts/components/projectCard.js"></script>
@@ -20,10 +21,13 @@
     </header>
 
     <main>
-        <section id="about-me" class="">
-            <h2>My name is</h2>
-            <h1>Brandon Reponte</h1>
-            <p>
+        <!-- ABOUT ME -->
+        <section id="about-me" class="active">
+            <div id="about-me-heading">
+                <h2>My name is</h2>
+                <h1>Brandon Reponte</h1>
+            </div>
+            <p id="about-me-info">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur 
                 tincidunt magna in mollis interdum. Sed non tempus sem. Vestibulum 
                 eu leo sed arcu rhoncus porttitor. Sed risus ex, lobortis eu ultrices 
@@ -31,19 +35,30 @@
                 tincidunt, porttitor sit amet nisl. Sed facilisis non sem in mattis. 
                 Donec quis risus fermentum, suscipit risus at, posuere lectus.
             </p>
-            <h2>Contact Me:</h2>
-            <div id="about-me-contact" class="blue card">
-                <p>Number: ###-###-####</p>
-                <p>Email: dummyemail@gmail.com</p>
-            </div>
-            <div id="about-me-linkedin" class="light-purple flip card">
-                <!-- TODO: card flip interactable -->
-            </div>
-            <div id="about-me-github" class="light-purple flip card">
-                <!-- TODO: card flip interactable -->
+            <div id="about-me-connect-section">
+                <h2 id="about-me-connect-header">Contact Me:</h2>
+                <div id="about-me-connect-info">
+                    <div id="about-me-contact" class="blue-card">
+                        <p>Number: (530) 844-1885</p>
+                        <p>Email: breponte03@gmail.com</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/brandon-reponte/">
+                        <div id="about-me-linkedin" class="light-purple-card flip">
+                            <!-- TODO: card flip interactable -->
+                            <img src="./assets/images/linked-in-logo.webp">
+                        </div>
+                    </a>
+                    <a href="https://github.com/breponte">
+                        <div id="about-me-github" class="light-purple-card flip">
+                            <!-- TODO: card flip interactable -->
+                            <img src="./assets/images/github-logo.webp">
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
-        <section id="experience" class="active">
+        <!-- WORK EXPERIENCE -->
+        <section id="experience" class="">
             <h1>My Experience</h1>
             <div id="experience-gallery">
                 <experience-card>
@@ -75,6 +90,7 @@
                 </experience-card>
             </div>
         </section>
+        <!-- EDUCATION -->
         <section id="education" class="">
             <h2>I attended</h2>
             <img src="./assets/images/ucsd-logo.webp" alt="UC San Diego">
@@ -90,7 +106,8 @@
                 Donec quis risus fermentum, suscipit risus at, posuere lectus.
             </p>
         </section>
-        <section id="projects" class="active">
+        <!-- PROJECTS -->
+        <section id="projects" class="">
             <h1>My Projects</h1>
             <div id="projects-gallery">
                 <project-card>
