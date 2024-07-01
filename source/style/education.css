@@ -1,0 +1,29 @@
+#education {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    gap: 1.5rem;
+}
+
+#education img {
+    height: 6rem;
+}
+
+#ucsd-seal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7.5rem;
+    transform: scale(2);
+    z-index: -1;
+}
+
+#ucsd-cse-logo {
+    transform: scale(2);
+}
+
+#education p {
+    padding-top: 6rem;
+}
