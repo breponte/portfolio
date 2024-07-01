@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style/index.css" rel="stylesheet">
     <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/components/experienceCard.js"></script>
+    <script defer src="./scripts/components/projectCard.js"></script>
     <title>Brandon's Portfolio</title>
 </head>
 <body>
@@ -18,7 +20,7 @@
     </header>
 
     <main>
-        <section id="about-me">
+        <section id="about-me" class="">
             <h2>My name is</h2>
             <h1>Brandon Reponte</h1>
             <p>
@@ -41,13 +43,39 @@
                 <!-- TODO: card flip interactable -->
             </div>
         </section>
-        <section id="experience">
+        <section id="experience" class="active">
             <h1>My Experience</h1>
             <div id="experience-gallery">
-                <!-- TODO: custom web component -->
+                <experience-card>
+                    Experience 1
+                    <p slot="company">Company Name 1</p>
+                    <p slot="date">January 2024</p>
+                    <div slot="image">
+                        <img src="./assets/images/ucsd-seal.webp" alt="something">
+                    </div>
+                    <div slot="description">Description Here</div>
+                </experience-card>
+                <experience-card>
+                    Experience 2
+                    <p slot="company">Company Name 2 </p>
+                    <p slot="date">February 2024</p>
+                    <div slot="image">
+                        <img src="./assets/images/ucsd-seal.webp" alt="something">
+                    </div>
+                    <div slot="description">Description Here</div>
+                </experience-card>
+                <experience-card>
+                    Experience 3
+                    <p slot="company">Company Name 3</p>
+                    <p slot="date">March 2024</p>
+                    <div slot="image">
+                        <img src="./assets/images/ucsd-seal.webp" alt="something">
+                    </div>
+                    <div slot="description">Description Here</div>
+                </experience-card>
             </div>
         </section>
-        <section id="education">
+        <section id="education" class="">
             <h2>I attended</h2>
             <img src="./assets/images/ucsd-logo.webp" alt="UC San Diego">
             <img src="./assets/images/ucsd-seal.webp" alt="UC San Diego Logo">
@@ -62,10 +90,45 @@
                 Donec quis risus fermentum, suscipit risus at, posuere lectus.
             </p>
         </section>
-        <section id="projects">
+        <section id="projects" class="active">
             <h1>My Projects</h1>
             <div id="projects-gallery">
-                <!-- TODO: custom web component -->
+                <project-card>
+                    Project Name 1
+                    <ul slot="tags">
+                        <li>Scary</li>
+                        <li>Horror</li>
+                        <li>Yikes!</li>
+                    </ul>
+                    <div slot="image">
+                        <img src="./assets/images/ucsd-seal.webp" alt="something">
+                    </div>
+                    <div slot="description">Description Here</div>
+                </project-card>
+                <project-card>
+                    Project Name 2
+                    <ul slot="tags">
+                        <li>Funny</li>
+                        <li>Comedy</li>
+                        <li>Happy</li>
+                    </ul>
+                    <div slot="image">
+                        <img src="./assets/images/ucsd-seal.webp" alt="something">
+                    </div>
+                    <div slot="description">Description Here</div>
+                </project-card>
+                <project-card>
+                    Project Name 3
+                    <ul slot="tags">
+                        <li>Yes</li>
+                        <li>No</li>
+                        <li>Maybe</li>
+                    </ul>
+                    <div slot="image">
+                        <img src="./assets/images/ucsd-seal.webp" alt="something">
+                    </div>
+                    <div slot="description">Description Here</div>
+                </project-card>
             </div>
         </section>
     </main>
