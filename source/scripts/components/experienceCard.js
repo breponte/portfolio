@@ -10,7 +10,7 @@ experienceTemplate.innerHTML = `
             background-color: var(--blue);
             border-radius: 1.5rem;
             display: grid;
-            grid-template-columns: 4fr 1fr;
+            grid-template-columns: 3fr 2fr;
             grid-template-rows: 2.5rem 2.5rem 20rem;
             padding: 1rem;
         }
@@ -40,7 +40,7 @@ experienceTemplate.innerHTML = `
             justify-self: center;
             justify-content: center;
             align-items: center;
-            background-color: var(--purple);
+            background-color: var(--white);
         }
 
         div > div:not(.active) {

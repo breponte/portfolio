@@ -5,6 +5,7 @@
     align-items: center;
     margin: 5rem;
     gap: 1.5rem;
+    position: relative;
 }
 
 #education img {
@@ -15,7 +16,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 7.5rem;
+    margin: 3rem;
     transform: scale(2);
     z-index: -1;
 }
