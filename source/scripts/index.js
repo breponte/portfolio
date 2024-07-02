@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
+    const experienceGallery = document.querySelector('#experience-gallery');
+    const projectsGallery = document.querySelector('#projects-gallery');
+    
     animateScroll();
+    handleScroll(experienceGallery);
+    handleScroll(projectsGallery);
 }
 
 /**
@@ -21,4 +26,18 @@ function animateScroll() {
 
     const hiddenSections = document.querySelectorAll('.hidden');
     hiddenSections.forEach((element) => observer.observe(element));
+}
+
+function handleScroll() {
+    window.addEventListener('scroll', onScroll);
+}
+
+function handleScroll(container) {
+    container.addEventListener('wheel', (event) => {
+        if (!event.deltaY) {
+            return;
+        }
+        event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
+        event.preventDefault();
+    });
 }

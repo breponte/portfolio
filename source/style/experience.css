@@ -1,5 +1,16 @@
 #experience-gallery {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: row;
+    gap: 5rem;
+    width: 42rem;
+    height: 33rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#experience-gallery::-webkit-scrollbar {
+    display: none;
 }

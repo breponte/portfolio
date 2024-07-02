@@ -10,6 +10,7 @@ experienceTemplate.innerHTML = `
             background-color: var(--blue);
             border-radius: 1.5rem;
             display: grid;
+            width: 40rem;
             grid-template-columns: 3fr 2fr;
             grid-template-rows: 2.5rem 2.5rem 20rem;
             padding: 1rem;
