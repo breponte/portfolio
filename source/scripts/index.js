@@ -37,7 +37,7 @@ function handleScroll(container) {
         if (!event.deltaY) {
             return;
         }
-        event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
+        event.currentTarget.scrollLeft += event.deltaY/2 + event.deltaX;
         event.preventDefault();
     });
 }

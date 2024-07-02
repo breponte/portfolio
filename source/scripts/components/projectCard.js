@@ -10,7 +10,7 @@ projectTemplate.innerHTML = `
             background-color: var(--blue);
             border-radius: 1.5rem;
             display: grid;
-            grid-template-columns: 20rem 20rem;
+            grid-template-columns: 25rem 15rem;
             grid-template-rows: 10rem 20rem;
             padding: 1rem;
         }
