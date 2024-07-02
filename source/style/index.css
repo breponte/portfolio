@@ -28,6 +28,7 @@
 
 body {
     background-color: var(--background-color);
+    overflow: hidden;
 }
 
 h1 {
@@ -80,10 +81,40 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5rem;
+    padding: 5rem;
     gap: 3rem;
 }
 
-section:not(.active) {
-    display: none !important;
+main {
+    max-height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+  
+main > section {
+    scroll-snap-align: start;
+}
+
+.hidden {
+    opacity: 0;
+    transition: ease-in-out 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
 }
