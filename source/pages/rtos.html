@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded RTOS with UDP/TCP</title>
+</head>
+<body>
+    <h1>Embedded RTOS with UDP/TCP</h1>
+    <h2>Abstract</h2>
+    What, why, results
+
+    <h2>Key Concepts</h2>
+    Methods, skills obtained
+
+    <h2>Reflection</h2>
+    Discuss results, challenges, areas of improvement
+
+    <h2>Journal</h2>
+    <h3>August 28, 2025</h3>
+    <p>
+        Oops, I forgot to record what has been happening these past couple weeks
+        with this project. I started sometime between the end of July and the
+        beginning of August, but because of family events I only really began
+        fully at the beginning of August.
+    </p>
+    <p>
+        So far I have assembled a system of sensors and actuators: ESP32 devkit
+        v1, KY-023 joystick module, KY-006 passive buzzer, KY-016 RGB LED,
+        KY-032 infrared obstacle avoidance sensor, KY-008 laser emitter, KY-018
+        photoresistor, and SG90 servos driven by PCA9685 motor driver. I thought
+        it would be a fun idea to use my previously 3D printed turret head from
+        CSE 147 to aim a laser pointer at a photoresistor target, and then alarm
+        when hit. The infrared obstacle avoidance sensor is for rough object
+        detection for the turret.
+    </p>
+    <p>
+        Everything works just fine, and I moved all the code for the sensors and
+        actuators from the Arduino loop() to FreeRTOS tasks/threads that are
+        automatically supported in the ESP32 environment. There was difficulty
+        with the motor driver, but that was because I didn't allocate enough
+        stack memory to it, which caused major lag. This makes sense because
+        the motor driver uses I2C protocol, which takes a considerable amount
+        of memory to operate.
+    </p>
+    <p>
+        I've added mutual exclusion so now there shouldn't be any race
+        conditions. During the implementation, I was running into deadlocks,
+        in which the locks were held permanently, preventing other tasks that
+        needed the lock from executing. I chose to have finer granularity locks
+        because some tasks are completely unrelated.
+    </p>
+    <p>
+        Lastly, I implemented a basic UDP communication between my PC and the
+        microcontroller. It was a little problematic because the packets weren't
+        being received by my PC. I used WireShark and discovered that the
+        packets were being sent from my ESP32, but my PC wasn't handling them.
+        Turns out it was a firewall problem, so I edited my firewall to accept
+        data from the specified port. Now my ESP32 sends its struct of sensor
+        values to my PC, and my PC prints it out cleanly. I used Python for my
+        PC for easier development because I am on Windows, but that might
+        interfere with my control later on in the project, when I plan to
+        implement TCP over the bare socket UDP.
+    </p>
+
+    *SHOW VIDEO OF SENSORS/ACTUATORS*
+
+</body>
+</html>
